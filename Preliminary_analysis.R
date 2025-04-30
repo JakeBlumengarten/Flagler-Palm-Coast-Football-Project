@@ -4,7 +4,7 @@ library(dplyr)
 library(stargazer)
 library(readxl)
 
-FPC_data <- read_excel("FPC_data.xlsx")
+FPC_data <- read_excel("Datasets/FPC_data.xlsx")
 FPC_data <- FPC_data %>%
   mutate(year = year(Date),
          month = month(Date),

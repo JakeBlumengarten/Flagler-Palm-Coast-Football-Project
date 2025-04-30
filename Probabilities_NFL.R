@@ -29,7 +29,7 @@ fourth_down_data <- NFL_data %>%
 logit_model <- glm(success ~ distance_to_EZ + ydstogo + score_differential + game_seconds_remaining, data = fourth_down_data, family = binomial)
 stargazer(logit_model, type = "text")
 
-wb <- loadWorkbook("/Users/jakeblumengarten/R/FPC analysis/probabilities.xlsx")
+wb <- loadWorkbook("/Users/jakeblumengarten/R/Flagler-Palm-Coast-Football-Project/Datasets/probabilities.xlsx")
 
 #### Score is 0-0 with 8 minutes left in the game###
 predict_data_0 <- expand.grid(
