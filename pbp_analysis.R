@@ -22,3 +22,5 @@ ggplot(summary_statistics, aes(x=Penalties_Received, y= Win))+
 model_pbp_3 <- glm(data = summary_statistics, Win~Penalties_Received + I(Penalties_Received^2), family = "binomial")
 stargazer(model_pbp_3, type = "text")
 
+new_model <- glm(data = summary_statistics, Win~Penalties_Received + I(Penalties_Received^2) + TDs + I(TDs^2) + Total_Yards + I(Total_Yards^2), family = "binomial")
+stargazer(new_model, type = "text")
