@@ -33,6 +33,8 @@ game_summary_statistics <- df %>%
     FGs_Made = sum(is_FG, na.rm = TRUE),
     TO_TD = sum(is_TO_TD, na.rm = TRUE)
   )
+writeData(summaries, sheet = "FPC_game_summaries", game_summary_statistics)
+saveWorkbook(summaries, "game_summaries.xlsx", overwrite = TRUE)
 
 
 df <- df %>%
